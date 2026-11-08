@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Bridge cable access visual in muted colors">
+  <rect width="1200" height="900" fill="#1d3c4f"/>
+  <rect y="620" width="1200" height="280" fill="#7b5c49" opacity="0.45"/>
+  <path d="M0 500 L1200 340" stroke="#d8e7ea" stroke-width="4" fill="none"/>
+  <path d="M0 570 L1200 410" stroke="#8fb2bd" stroke-width="3" fill="none"/>
+  <line x1="620" y1="290" x2="620" y2="620" stroke="#edf5f7" stroke-width="3"/>
+  <circle cx="620" cy="500" r="14" fill="#edf5f7"/>
+</svg>

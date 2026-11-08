@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Tower installation visual in muted colors">
+  <rect width="1200" height="900" fill="#edf1ed"/>
+  <rect y="670" width="1200" height="230" fill="#c59d79" opacity="0.35"/>
+  <polygon points="600,120 860,780 340,780" fill="#21475a"/>
+  <line x1="600" y1="200" x2="600" y2="760" stroke="#83aab5" stroke-width="3"/>
+  <line x1="480" y1="460" x2="720" y2="460" stroke="#83aab5" stroke-width="3"/>
+  <circle cx="600" cy="520" r="14" fill="#eef6f7"/>
+  <line x1="600" y1="520" x2="600" y2="660" stroke="#eef6f7" stroke-width="3"/>
+</svg>

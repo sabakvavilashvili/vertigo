@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="High-rise maintenance visual in muted colors">
+  <rect width="1200" height="900" fill="#e2eeef"/>
+  <rect x="120" y="60" width="280" height="780" fill="#2a4c5d"/>
+  <rect x="440" y="120" width="320" height="720" fill="#3e6272"/>
+  <rect x="800" y="40" width="260" height="800" fill="#56798a"/>
+  <rect y="650" width="1200" height="250" fill="#c49a75" opacity="0.32"/>
+  <line x1="930" y1="140" x2="930" y2="700" stroke="#eff6f7" stroke-width="3"/>
+  <circle cx="930" cy="430" r="15" fill="#eff6f7"/>
+</svg>

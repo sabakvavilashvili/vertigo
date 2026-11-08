@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Abstract vertical structures visual in muted colors">
+  <rect width="1200" height="900" fill="#edf2ef"/>
+  <rect x="120" y="80" width="170" height="740" fill="#284e60"/>
+  <rect x="330" y="140" width="140" height="680" fill="#3f6576"/>
+  <rect x="510" y="50" width="180" height="770" fill="#2f586a"/>
+  <rect x="730" y="190" width="120" height="630" fill="#56798b"/>
+  <rect x="890" y="100" width="190" height="720" fill="#1e3f51"/>
+  <rect y="700" width="1200" height="200" fill="#c49b79" opacity="0.28"/>
+</svg>
