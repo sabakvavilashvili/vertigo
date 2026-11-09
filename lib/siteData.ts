@@ -30,6 +30,10 @@ export type Project = {
 
 export const site = {
   brand: "VERTIGO",
+  title: {
+    ka: "სასიმაღლო სამუშაოები - ალპინისტები",
+    en: "High Altitude Rope Access"
+  },
   tagline: {
     ka: "სამრეწველო სიმაღლეზე მუშაობა და თოკზე წვდომა",
     en: "Rope Access & Industrial Services"
@@ -259,8 +263,11 @@ export const approach = [
 ];
 
 export const uiText = {
+  navHome: { ka: "მთავარი", en: "Home" },
   navProjects: { ka: "პროექტები", en: "Projects" },
   navAbout: { ka: "ჩვენ შესახებ", en: "About" },
+  navServices: { ka: "სერვისები", en: "Services" },
+  navJoin: { ka: "გახდი ჩვენი გუნდის წევრი", en: "Join our team" },
   navContact: { ka: "კონტაქტი", en: "Contact" },
   requestQuote: { ka: "შეთავაზების მოთხოვნა", en: "Request a Quote" },
   footerNavigation: { ka: "ნავიგაცია", en: "Navigation" },

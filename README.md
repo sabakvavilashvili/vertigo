@@ -30,11 +30,12 @@ npm run build
 
 ## Structure
 
-- `app/` route pages (`/`, `/projects`, `/projects/[slug]`, `/about`, `/contact`)
+- `app/` homepage with in-page navigation and redirects from legacy routes
 - `components/` reusable UI modules
 - `lib/siteData.ts` editable content model (services, projects, contact info)
-- `public/images/` placeholder visuals to replace with real photography
+- `public/images/hero/` rope-access slideshow photography
+- `public/images/` other project and page visuals
 
 ## Content Notes
 
-Project entries and capability blocks use placeholder text intentionally. Replace with verified project and company information before publishing.
+Project entries and capability blocks use placeholder text intentionally. Replace these and the example contact details with verified information before publishing. The homepage slideshow uses photos from Wikimedia Commons; source and license information is recorded in `components/HeroSlideshow.tsx`. The CC BY photo attribution appears in the footer.

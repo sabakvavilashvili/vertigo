@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import type { Lang } from "@/lib/siteData";
+import { site, type Lang } from "@/lib/siteData";
 
 type LanguageContextValue = {
   lang: Lang;
@@ -22,6 +22,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    document.title = site.title[lang];
     localStorage.setItem("vertigo-lang", lang);
   }, [lang]);
 

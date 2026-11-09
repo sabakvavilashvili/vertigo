@@ -18,11 +18,17 @@ export function Footer() {
           <div>
             <p className="footer-label">{t(lang, uiText.footerNavigation)}</p>
             <ul>
-              <li><Link href="/projects">{t(lang, uiText.navProjects)}</Link></li>
-              <li><Link href="/about">{t(lang, uiText.navAbout)}</Link></li>
-              <li><Link href="/contact">{t(lang, uiText.navContact)}</Link></li>
+              <li><Link href="/#home">{t(lang, uiText.navHome)}</Link></li>
+              <li><Link href="/#about">{t(lang, uiText.navAbout)}</Link></li>
+              <li><Link href="/#services">{t(lang, uiText.navServices)}</Link></li>
+              <li><Link href="/#projects">{t(lang, uiText.navProjects)}</Link></li>
+              <li><Link href="/#join">{t(lang, uiText.navJoin)}</Link></li>
+              <li><Link href="/#contact">{t(lang, uiText.navContact)}</Link></li>
             </ul>
           </div>
+          <p className="site-footer__attribution">
+            {lang === "ka" ? "ფოტო" : "Photo"}: <a href="https://commons.wikimedia.org/wiki/File:Bubensk%C3%A9_n%C3%A1b%C5%99e%C5%BE%C3%AD,_%C4%8Di%C5%A1t%C4%9Bn%C3%AD_oken_ni%C5%BE%C5%A1%C3%AD_budovy_Lighthouse.jpg">ŠJů, Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · {lang === "ka" ? "მოჭრილი" : "cropped"}
+          </p>
           <div>
             <p className="footer-label">{t(lang, uiText.footerContact)}</p>
             <ul>

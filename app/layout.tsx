@@ -3,13 +3,14 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { site } from "@/lib/siteData";
 
 export const metadata: Metadata = {
-  title: "VERTIGO | Rope Access & Industrial Services",
+  title: site.title.ka,
   description:
     "Professional rope access solutions for complex work in places conventional access cannot reach.",
   openGraph: {
-    title: "VERTIGO | Rope Access & Industrial Services",
+    title: site.title.ka,
     description:
       "Professional rope access solutions for complex work in places conventional access cannot reach.",
     type: "website",
