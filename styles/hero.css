@@ -1,0 +1,114 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  margin-top: -4.8rem;
+  padding-top: 4.8rem;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  color: #fff;
+  background: var(--bg);
+}
+
+.hero__slideshow {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+}
+
+.hero__image {
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.025);
+  transition: opacity 1s ease, transform 7s linear;
+}
+
+.hero__image.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero__overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 12, 12, 0.54), rgba(10, 12, 12, 0.08) 78%),
+  linear-gradient(0deg, rgba(10, 12, 12, 0.62), transparent 37%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 9rem;
+}
+
+.hero__content h1 {
+  margin: 1.2rem 0 0;
+  max-width: 22ch;
+  font-size: clamp(1.9rem, 3.4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.hero__content > p {
+  margin: 1.4rem 0 0;
+  max-width: 40ch;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.hero__actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.hero__scroll {
+  position: absolute;
+  z-index: 3;
+  bottom: 1.5rem;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.hero__scroll span {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.2rem) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.hero__scroll:hover span {
+  transform: translateY(0.1rem) rotate(45deg);
+}
+
+.hero__scroll:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

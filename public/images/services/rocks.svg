@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Falling rocks warning sign">
+  <rect width="1200" height="900" fill="#15406b"/>
+  <g stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+    <line x1="0" y1="225" x2="1200" y2="225"/><line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/><line x1="600" y1="0" x2="600" y2="900"/><line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <path d="M600 120L960 750Q972 780 936 780H264Q228 780 240 750Z" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(20 35) scale(0.95)">
+    <path d="M562 300L606 384L582 446L646 528L618 590L700 700H334Z" fill="none" stroke="#ffffff" stroke-width="27" stroke-linejoin="round"/>
+  </g>
+  <g fill="#ffffff" transform="translate(720 525) scale(0.66) translate(-710 -535)">
+    <path d="M766 467L758 496L737 512L697 509L684 482L685 455L702 436L730 421L764 442Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M833 588L829 611L800 629L773 616L755 599L759 572L776 552L807 542L826 560Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M816 695L804 727L775 737L742 731L724 710L727 672L737 649L773 641L803 659Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M727 569L722 581L706 590L690 590L679 576L682 556L689 547L709 541L721 549Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M676 418L674 432L657 443L642 440L637 429L635 410L643 400L660 398L670 406Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M624 345L623 355L613 358L604 358L596 349L597 341L604 332L611 332L620 335Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M705 363L704 369L696 376L688 374L681 365L682 356L686 352L694 349L703 353Z" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+</svg>

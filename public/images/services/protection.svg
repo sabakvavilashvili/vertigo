@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Shield with check mark">
+  <rect width="1200" height="900" fill="#15406b"/>
+  <g stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+    <line x1="0" y1="225" x2="1200" y2="225"/><line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/><line x1="600" y1="0" x2="600" y2="900"/><line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M600 170l270 100v190c0 160-110 260-270 320-160-60-270-160-270-320V270z"/>
+    <path d="M480 470l95 95 160-170"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Window with squeegee and sparkles">
+  <rect width="1200" height="900" fill="#15406b"/>
+  <g stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+    <line x1="0" y1="225" x2="1200" y2="225"/><line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/><line x1="600" y1="0" x2="600" y2="900"/><line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="290" y="190" width="380" height="520" rx="24"/>
+    <path d="M360 300l70-70M360 400l170-170" stroke-width="14" stroke-opacity="0.7"/>
+    <path d="M480 190v520M290 450h380" stroke-width="8"/>
+    <rect x="700" y="360" width="250" height="50" rx="16"/>
+    <path d="M825 410v70"/>
+    <rect x="817" y="480" width="16" height="120" rx="8"/>
+  </g>
+  <g fill="#ffffff">
+    <path d="M770 130Q770 190 710 190Q770 190 770 250Q770 190 830 190Q770 190 770 130Z"/>
+    <path d="M900 250Q900 285 865 285Q900 285 900 320Q900 285 935 285Q900 285 900 250Z"/>
+    <path d="M940 470Q940 490 920 490Q940 490 940 510Q940 490 960 490Q940 490 940 470Z"/>
+  </g>
+</svg>

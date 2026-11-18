@@ -1,0 +1,125 @@
+.section--contact {
+  background: #1b2f44;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  color: var(--muted);
+}
+
+.contact-details a,
+.contact-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.contact-details svg {
+  flex: none;
+  color: var(--accent);
+}
+
+.contact-details a:hover {
+  color: var(--accent);
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.social-icon:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.contact-bottom-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.contact-bottom-row .scroll-top {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-bottom-row .social-icons {
+  margin-top: 0;
+}
+
+.scroll-top {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.scroll-top span {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(0.2rem) rotate(-135deg);
+  transition: transform 0.2s ease;
+}
+
+.scroll-top:hover span {
+  transform: translateY(-0.1rem) rotate(-135deg);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.cta-block {
+  border: 0;
+  padding: 2rem 0;
+}
+
+.cta-block h2 {
+  margin: 1rem 0 0;
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.cta-block p {
+  margin: 1rem 0 0;
+  max-width: 44ch;
+  color: var(--muted);
+}
+
+.cta-block .button {
+  margin-top: 1.6rem;
+}

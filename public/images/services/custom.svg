@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Magnifying glass searching for a custom service">
+  <rect width="1200" height="900" fill="#15406b"/>
+  <g stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+    <line x1="0" y1="225" x2="1200" y2="225"/><line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="675" x2="1200" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="900"/><line x1="600" y1="0" x2="600" y2="900"/><line x1="900" y1="0" x2="900" y2="900"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="470" cy="400" r="138"/>
+    <path d="M568 498L770 700"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="860" cy="700" r="11"/>
+    <circle cx="930" cy="700" r="11"/>
+    <circle cx="1000" cy="700" r="11"/>
+  </g>
+</svg>

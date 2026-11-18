@@ -1,0 +1,154 @@
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background: var(--bg);
+}
+
+.project-modal__photos {
+  overflow-y: auto;
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  align-content: start;
+}
+
+.project-modal__photos img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+
+.project-modal__details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 0.6rem 0.6rem 0.6rem 0;
+  padding: 4.5rem 2rem 2rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #1b2f44;
+}
+
+.project-modal__details h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.project-modal__details p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+.project-modal__meta {
+  margin-top: 0.5rem;
+}
+
+.project-modal__logo {
+  margin-top: auto;
+  padding-top: 2rem;
+  justify-content: center;
+  font-size: 1.56rem;
+  opacity: 0.9;
+}
+
+.project-modal__logo .wordmark__image {
+  height: 5.85rem;
+}
+
+.project-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-modal__close:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+@media (max-width: 800px) {
+  .project-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .project-modal__details {
+    order: -1;
+    margin: 0.6rem 0.6rem 0;
+    padding-top: 4rem;
+    max-height: 45vh;
+  }
+
+  .project-modal__photos {
+    order: 1;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+.project-modal {
+  animation: modal-in 0.3s ease both;
+}
+
+.project-modal--closing {
+  animation: modal-out 0.28s ease both;
+}
+
+.project-modal__details {
+  animation: modal-slide 0.4s 0.1s ease both;
+}
+
+@keyframes modal-slide {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project-modal__photos--single {
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.project-modal__photos--single img {
+  height: 100%;
+  object-fit: cover;
+}

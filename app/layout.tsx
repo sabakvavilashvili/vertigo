@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { LanguageProvider } from "@/components/LanguageProvider";
-import { site } from "@/lib/siteData";
+import "@/styles/globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { LanguageProvider } from "@/components/providers/LanguageProvider";
+import { site } from "@/content";
 
 export const metadata: Metadata = {
   title: site.title.ka,

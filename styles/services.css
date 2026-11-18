@@ -1,0 +1,50 @@
+.service-slot {
+  position: relative;
+}
+
+.service-slot .service-card {
+  height: 100%;
+}
+
+.service-card--open {
+  position: absolute;
+  z-index: 30;
+  overflow: hidden;
+  background: #172636;
+  border-color: var(--brand);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.45);
+  transition: left 0.3s ease, top 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.service-card--open:hover,
+.service-card--open:focus-visible {
+  transform: none;
+}
+
+.service-card--grown .project-card__media {
+  aspect-ratio: 16 / 9;
+}
+
+.service-card__details {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.service-card__details ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.service-card__details li {
+  margin-top: 0.4rem;
+}
+
+.service-card__details p {
+  margin: 0;
+}
+
+.service-card__cta {
+  margin-top: 1rem;
+  cursor: pointer;
+}
