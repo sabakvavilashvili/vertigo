@@ -34,7 +34,8 @@
   z-index: 1;
   inset: 0;
   background: linear-gradient(90deg, rgba(10, 12, 12, 0.54), rgba(10, 12, 12, 0.08) 78%),
-  linear-gradient(0deg, rgba(10, 12, 12, 0.62), transparent 37%);
+  linear-gradient(0deg, rgba(10, 12, 12, 0.62), transparent 37%),
+  rgba(10, 12, 12, 0.18);
 }
 
 .hero__content {
@@ -55,13 +56,15 @@
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.01em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55), 0 0 28px rgba(0, 0, 0, 0.45);
 }
 
 .hero__content > p {
   margin: 1.4rem 0 0;
   max-width: 40ch;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.45);
 }
 
 .hero__actions {

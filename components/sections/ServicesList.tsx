@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { Localized, Service } from "@/content";
 import { t } from "@/content";
 import { useLanguage } from "@/components/providers/LanguageProvider";
@@ -9,8 +9,10 @@ export function ServicesList({ items, contactLabel }: { items: Service[]; contac
   const { lang } = useLanguage();
   const [active, setActive] = useState<number | null>(null);
   const [expanded, setExpanded] = useState(false);
-  const [geo, setGeo] = useState<{ w: number; h: number; left: number; top: number; width: number; height: number } | null>(null);
+  const [geo, setGeo] = useState<{ single: boolean; w: number; h: number; left: number; top: number; width: number; height: number } | null>(null);
+  const [fitH, setFitH] = useState<number | null>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLElement | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout>>();
 
   const close = () => {
@@ -38,6 +40,20 @@ export function ServicesList({ items, contactLabel }: { items: Service[]; contac
 
   useEffect(() => () => clearTimeout(timer.current), []);
 
+  // In a single-column layout the card grows to fit its content
+  useLayoutEffect(() => {
+    const el = cardRef.current;
+    if (!geo?.single || !expanded || !el) {
+      setFitH(null);
+      return;
+    }
+    const prev = el.style.height;
+    el.style.height = "auto";
+    const natural = el.offsetHeight;
+    el.style.height = prev;
+    setFitH(natural);
+  }, [expanded, geo, lang, active]);
+
   // Grows the card to 2x2 grid cells, extending toward the inside of the grid
   const open = (index: number, slot: HTMLElement) => {
     if (active === index && expanded) return;
@@ -62,13 +78,16 @@ export function ServicesList({ items, contactLabel }: { items: Service[]; contac
     // Rows can differ in height, so clamp to the grid's bounds
     let height: number;
     let top = 0;
-    if (s.bottom >= g.bottom - 2) {
+    const singleColumn = fullW > g.width + 2;
+    if (singleColumn) {
+      height = fullH;
+    } else if (s.bottom >= g.bottom - 2) {
       height = Math.min(fullH, s.bottom - g.top);
       top = -(height - h);
     } else {
       height = Math.min(fullH, g.bottom - s.top);
     }
-    setGeo({ w, h, left, top, width, height });
+    setGeo({ single: singleColumn, w, h, left, top, width, height });
     setActive(index);
     setExpanded(false);
     requestAnimationFrame(() => requestAnimationFrame(() => setExpanded(true)));
@@ -82,17 +101,18 @@ export function ServicesList({ items, contactLabel }: { items: Service[]; contac
           <div
             key={index}
             className="service-slot"
-            style={isActive && geo ? { height: geo.h } : undefined}
+            style={isActive && geo ? { height: geo.single && expanded ? fitH ?? geo.h : geo.h } : undefined}
             onPointerLeave={(event) => {
               if (event.pointerType === "mouse" && isActive) close();
             }}
           >
             <article
+              ref={isActive ? cardRef : undefined}
               className={`project-card project-card--interactive service-card${isActive ? " service-card--open" : ""}${isActive && expanded ? " service-card--grown" : ""}`}
               style={
                 isActive && geo
                   ? expanded
-                    ? { left: geo.left, top: geo.top, width: geo.width, height: geo.height }
+                    ? { left: geo.left, top: geo.top, width: geo.width, height: geo.single ? fitH ?? geo.h : geo.height }
                     : { left: 0, top: 0, width: geo.w, height: geo.h }
                   : undefined
               }

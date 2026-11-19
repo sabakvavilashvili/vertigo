@@ -57,7 +57,7 @@ export function HeroSlideshow({ lang }: { lang: Lang }) {
         </div>
       </div>
       <a
-        href="#about"
+        href="#services"
         className="hero__scroll"
         aria-label={t(lang, heroSection.scrollLabel)}
       >
