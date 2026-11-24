@@ -6,7 +6,7 @@ Production-ready Next.js website for VERTIGO (rope access and industrial service
 
 - Next.js (App Router)
 - TypeScript
-- Plain CSS (`app/globals.css`)
+- Plain CSS (`styles/globals.css`)
 
 ## Run
 

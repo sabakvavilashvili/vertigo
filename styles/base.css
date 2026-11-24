@@ -24,10 +24,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section[id] {
-  scroll-margin-top: 0;
-}
-
 body {
   background: var(--bg);
   color: var(--ink);
