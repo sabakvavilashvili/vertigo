@@ -39,7 +39,7 @@ components/
   ui/                   SectionHeading, ContactIcon, SocialLinks, DetailModal
 content/                All site text and data (edit here)
   site.ts               Brand, page title, email, phone, socials, navigation labels
-  hero.ts               Hero text and slideshow photos (with photo credits)
+  hero.ts               Hero text and slideshow photos
   about.ts              About text, process steps, safety
   services.ts           Service cards and their lists
   projects.ts           Project cards and details
@@ -70,4 +70,4 @@ Requires Node 18.17 or newer.
 - To replace a photo, overwrite the file in `public/images/...` with the same name, or change its path in the matching `content/*.ts` entry.
 - To add a project, add an item in `content/projects.ts` and a folder in `public/images/projects/<slug>/`.
 
-Project texts, phone, email, social links and photos are placeholders. Replace them with verified information before publishing, and update the site URL in `app/layout.tsx`. The hero photos come from Wikimedia Commons; keep their credits in `content/hero.ts` while you use them.
+Project texts, phone, email, social links and photos are placeholders. Replace them with verified information before publishing, and update the site URL in `app/layout.tsx`.
