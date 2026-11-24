@@ -23,16 +23,87 @@
   transform: none;
 }
 
-@media (min-width: 601px) {
-  .service-card--grown .project-card__media {
-    aspect-ratio: auto;
-    height: 33.333%;
-    background: #15406b;
-  }
+.service-slot {
+  aspect-ratio: 4 / 5;
+}
 
-  .service-card--grown .project-card__media img {
-    object-fit: contain;
-  }
+.service-slot .service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .project-card__media {
+  position: relative;
+  flex: 0 0 50%;
+  aspect-ratio: auto;
+  background: #15406b;
+}
+
+.service-card .project-card__media img {
+  box-sizing: border-box;
+  padding: 14%;
+  object-fit: contain;
+  transition: padding 0.3s ease;
+}
+
+.service-card--grown .project-card__media img {
+  padding: 4%;
+}
+
+.service-card .project-card__body {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.service-card:not(.service-card--grown) .project-card__body {
+  overflow: hidden;
+}
+
+.service-card .project-card__body h3 {
+  min-height: 2.88rem;
+}
+
+.service-card__preview {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.service-card__preview li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-card__preview li::before {
+  content: "· ";
+}
+
+.service-card .project-card__body {
+  position: relative;
+  padding-bottom: 1.4rem;
+}
+
+.service-card__chevron {
+  position: absolute;
+  left: 50%;
+  bottom: 0.45rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-left: -0.275rem;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .service-card__chevron {
+  border-color: var(--brand);
+  transform: translateY(2px) rotate(45deg);
 }
 
 .service-card__details {
@@ -60,4 +131,24 @@
 .service-card__cta {
   margin-top: 1rem;
   cursor: pointer;
+}
+
+.service-card--grown .service-card__chevron {
+  transform: rotate(-135deg);
+}
+
+.service-card--grown:hover .service-card__chevron {
+  transform: translateY(-2px) rotate(-135deg);
+}
+
+.service-card .project-card__body h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.service-card--grown .project-card__body h3 {
+  font-size: 2.4rem;
+  text-wrap: balance;
 }

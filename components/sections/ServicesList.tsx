@@ -5,6 +5,33 @@ import type { Localized, Service } from "@/content";
 import { t } from "@/content";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
+// Shrinks the font until the title fits in two lines
+function FitTitle({ text }: { text: string }) {
+  const ref = useRef<HTMLHeadingElement>(null);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const fit = () => {
+      el.style.fontSize = "";
+      el.style.minHeight = "0";
+      let size = parseFloat(getComputedStyle(el).fontSize);
+      const min = 12;
+      while (size > min && el.scrollHeight > size * 1.2 * 2 + 1) {
+        size -= 0.25;
+        el.style.fontSize = `${size}px`;
+      }
+      el.style.minHeight = "";
+    };
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [text]);
+
+  return <h3 ref={ref}>{text}</h3>;
+}
+
 export function ServicesList({ items, contactLabel }: { items: Service[]; contactLabel: Localized }) {
   const { lang } = useLanguage();
   const [active, setActive] = useState<number | null>(null);
@@ -131,11 +158,21 @@ export function ServicesList({ items, contactLabel }: { items: Service[]; contac
                 }
               }}
             >
-              <div className="project-card__media">
+              <div
+                className="project-card__media"
+                style={isActive && expanded && geo?.single ? { flex: `0 0 ${geo.h / 2}px` } : undefined}
+              >
                 <img src={item.image} alt={`${t(lang, item.title)} placeholder visual`} />
               </div>
               <div className="project-card__body">
-                <h3>{t(lang, item.title)}</h3>
+                <FitTitle text={t(lang, item.title)} />
+                {!(isActive && expanded) && (
+                  <ul className="service-card__preview">
+                    {item.details.slice(0, 2).map((detail, i) => (
+                      <li key={i}>{t(lang, detail)}</li>
+                    ))}
+                  </ul>
+                )}
                 {isActive && expanded && (
                   <div className="service-card__details">
                     {item.custom ? (
@@ -162,6 +199,7 @@ export function ServicesList({ items, contactLabel }: { items: Service[]; contac
                     )}
                   </div>
                 )}
+                <span className="service-card__chevron" aria-hidden="true" />
               </div>
             </article>
           </div>
